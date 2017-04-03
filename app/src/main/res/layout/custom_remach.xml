@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="1.5dp"
+    android:layout_marginTop="3dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_gold_invite"
+        android:layout_width="150dp"
+        android:scaleType="fitXY"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/likedPassedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_liked"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignBottom="@+id/userImage"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

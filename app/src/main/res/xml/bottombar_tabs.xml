@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        id="@+id/tab_match"
+        icon="@drawable/ic_tab_match"
+        title="Match" />
+    <tab
+        id="@+id/tab_pool"
+        icon="@drawable/ic_tab_pool"
+        title="Pool" />
+    <tab
+        id="@+id/tab_connections"
+        icon="@drawable/ic_tab_connections"
+        title="Connections" />
+    <tab
+        id="@+id/tab_gold"
+        icon="@drawable/ic_tab_gold"
+        title="Gold" />
+    <tab
+        id="@+id/tab_account"
+        icon="@drawable/ic_tab_account"
+        title="Account" />
+</tabs>

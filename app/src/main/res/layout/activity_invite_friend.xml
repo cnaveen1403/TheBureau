@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/backIconIMG"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/dimens_sixteen_dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/dimens_twelve_dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_logo_white" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="Invite Friend"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dimens_eight_dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dimens_eight_dp"
+            android:src="@drawable/img_gold_invite"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="Earn Gold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimens_eight_dp"
+            android:textSize="@dimen/bureau_earn_gold_text_size"
+            android:layout_toLeftOf="@+id/goldIconIMG"
+            android:textColor="@color/black"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="By Inviting your friends via"
+            android:layout_marginTop="@dimen/dimens_eight_dp"
+            android:gravity="center"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:layout_toLeftOf="@+id/goldIconIMG"
+            android:textColor="@color/black"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/emailLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/img_email_invite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Email"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:layout_toLeftOf="@+id/goldIconIMG"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smsLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/img_mob_invite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="SMS"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:layout_toLeftOf="@+id/goldIconIMG"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+

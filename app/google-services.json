@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "145321124612",
+    "firebase_url": "https://thebureau-56a6f.firebaseio.com",
+    "project_id": "thebureau-56a6f",
+    "storage_bucket": "thebureau-56a6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145321124612:android:8723a0dbf99042ae",
+        "android_client_info": {
+          "package_name": "com.bureau.bureauapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145321124612-t78fuqba9bn241a81v0measjq9en83q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBGvcd8rs1-y71ap7z-zXqLtc7hzgc7JU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

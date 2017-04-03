@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/title_activity_image_edit"
+                    android:textSize="@dimen/bureau_title_text_size"
+                    android:textColor="@color/white"
+                    fontPath="fonts/Comfortaa-Bold.ttf" />
+
+                <ImageView
+                    android:id="@+id/backIconIMG"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:padding="@dimen/dimens_sixteen_dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon" />
+
+                <ImageView
+                    android:id="@+id/iv_save_images"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:padding="@dimen/dimens_eight_dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_tick"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text_background"
+            android:padding="3dp">
+
+            <com.bureau.bureauapp.helperclasses.HorizontalListView
+                android:id="@+id/userImagesHorizantalList"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_toLeftOf="@+id/ivAddImage" />
+
+            <ImageView
+                android:id="@+id/ivAddImage"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_camera" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
+

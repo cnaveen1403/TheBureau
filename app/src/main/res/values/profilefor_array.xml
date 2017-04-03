@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profilefor_array">
+        <item>Self</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Cousine</item>
+        <item>Relative</item>
+        <item>Friend</item>
+    </string-array>
+</resources>

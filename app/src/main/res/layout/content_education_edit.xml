@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens_eight_dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".profileedit.EducationEdit"
+    tools:showIn="@layout/activity_education_edit"
+    tools:ignore="MissingPrefix">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.90"
+                    android:text="@string/txtEducation"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:text="@string/txtColon" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/et_HighLvlEducation_edit"
+                    android:paddingLeft="5dp"
+                    android:hint="@string/hintSelect"
+                    android:layout_gravity="center_vertical"
+                    style="@style/spinner_style"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:inputType="none"
+                    android:editable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.90"
+                    android:text="@string/txtHonors"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:id="@+id/et_HighLvlHonor_edit"
+                    android:hint="@string/hintHonor"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.90"
+                    android:text="@string/txtMajor"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:id="@+id/et_HighLvlMajor_edit"
+                    android:hint="@string/hintMajor"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.90"
+                    android:text="@string/txtCollege"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:id="@+id/et_HighLvlCollege_edit"
+                    android:hint="@string/hintCollege"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.90"
+                    android:text="@string/txtYear"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/et_HighLvlYear_edit"
+                    android:hint="@string/hintYear"
+                    android:inputType="number"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:singleLine="true"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_Add2Lvl_edit"
+                android:drawableStart="@drawable/ic_add"
+                android:drawableLeft="@drawable/ic_add"
+                android:drawablePadding="5dp"
+                android:singleLine="true"
+                android:text="@string/txtAdd2Lvl"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textSize="@dimen/bureau_regular_text_size"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_2ndLvlEducation_edit"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:text="@string/txtEducation"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".10"
+                        android:text="@string/txtColon"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/et_2ndLvlEducation_edit"
+                        android:paddingLeft="5dp"
+                        android:hint="@string/hintSelect"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:layout_gravity="center"
+                        style="@style/spinner_style"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:inputType="none"
+                        android:editable="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.90"
+                        android:text="@string/txtHonors"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10"
+                        android:text="@string/txtColon"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:layout_weight="1"
+                        android:id="@+id/et_2ndLvlHonor_edit"
+                        android:hint="@string/hintHonor"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.90"
+                        android:text="@string/txtMajor"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10"
+                        android:text="@string/txtColon"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:paddingLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/et_2ndLvlMajor_edit"
+                        android:hint="@string/hintMajor"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.90"
+                        android:text="@string/txtCollege"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10"
+                        android:text="@string/txtColon"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:layout_weight="1"
+                        android:id="@+id/et_2ndLvlCollege_edit"
+                        android:hint="@string/hintCollege"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.90"
+                        android:text="@string/txtYear"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10"
+                        android:text="@string/txtColon"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:paddingLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/et_2ndLvlYear_edit"
+                        android:inputType="number"
+                        android:hint="@string/hintYear"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

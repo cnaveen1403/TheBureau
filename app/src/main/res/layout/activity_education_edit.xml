@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".profileedit.EducationEdit"
+    tools:ignore="MissingPrefix">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/title_activity_education_edit"
+                android:textSize="@dimen/bureau_title_text_size"
+                android:textColor="@color/white"
+                fontPath="fonts/Comfortaa-Bold.ttf" />
+
+            <ImageView
+                android:id="@+id/backIconIMG"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:padding="@dimen/dimens_sixteen_dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_icon" />
+
+            <ImageView
+                android:id="@+id/iv_save_education"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:padding="@dimen/dimens_eight_dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_tick" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_education_edit" />
+
+</android.support.design.widget.CoordinatorLayout>

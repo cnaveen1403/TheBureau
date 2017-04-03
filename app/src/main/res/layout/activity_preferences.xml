@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/com.thebureauapp.www.app"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Preferences"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:textColor="@color/white"
+            fontPath="fonts/Comfortaa-Bold.ttf" />
+
+        <ImageView
+            android:id="@+id/backIconIMG"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/dimens_sixteen_dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <ImageView
+            android:id="@+id/iv_save_preferences"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/dimens_eight_dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_tick" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_margin="@dimen/dimens_eight_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_age_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:text="Age Range(Years Old)"
+                android:textSize="@dimen/bureau_regular_text_size"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_twelve_dp">
+
+                <TextView
+                    android:id="@+id/tvAgeMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/tvAgeMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textColor="#000"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <com.bureau.bureauapp.helperclasses.BureauRangeSeekbar
+                android:id="@+id/ageRangeSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:corner_radius="10"
+                app:min_value="18"
+                app:max_value="40"
+                app:gap="4"
+                app:bar_color="#939496"
+                app:bar_highlight_color="#FFE6122A"
+                app:left_thumb_color="#d50f26"
+                app:right_thumb_color="#d50f26"
+                app:left_thumb_color_pressed="#d50f26"
+                app:right_thumb_color_pressed="#d50f26"
+                app:data_type="_integer"
+                android:layout_below="@+id/textMin3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProfileGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtGender"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <ImageView
+                    android:id="@+id/ivFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/img_female_black" />
+
+                <ToggleButton
+                    android:id="@+id/tb_profile_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/toggle_gender_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/ivMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/img_male_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Account created by :"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <Spinner
+                    android:id="@+id/spinner_profilefor"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:paddingRight="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Country"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <Spinner
+                    android:id="@+id/countrySPNR"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:paddingRight="5dp"></Spinner>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Location (Radius around zipcode)"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <RelativeLayout
+                android:id="@+id/rl_seekbar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false">
+
+                <TextView
+                    android:id="@+id/tvLocationRadius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="No Limit"
+                    android:textColor="#000"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </RelativeLayout>
+
+            <com.bureau.bureauapp.helperclasses.BureauSeekbar
+                android:id="@+id/radiusSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_color="#939496"
+                app:bar_highlight_color="#FFE6122A"
+                app:corner_radius="10"
+                app:data_type="_integer"
+                app:steps="25"
+                app:gap="50"
+                app:left_thumb_color="#d50f26"
+                app:left_thumb_color_pressed="#d50f26"
+                app:min_value="0"
+                app:max_value="325" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:layout_gravity="start"
+                android:text="Height Range (ft)"
+                android:textSize="@dimen/bureau_regular_text_size"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_twelve_dp">
+
+                <TextView
+                    android:id="@+id/textMinHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.0"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/textMaxHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.0"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textColor="#000"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <com.bureau.bureauapp.helperclasses.BureauRangeSeekbar
+                android:id="@+id/heightRangeSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:corner_radius="10"
+                app:min_value="48"
+                app:max_value="84"
+                app:gap="4"
+                app:bar_color="#939496"
+                app:bar_highlight_color="#FFE6122A"
+                app:left_thumb_color="#d50f26"
+                app:right_thumb_color="#d50f26"
+                app:left_thumb_color_pressed="#d50f26"
+                app:right_thumb_color_pressed="#d50f26"
+                app:data_type="_integer"
+                android:layout_below="@+id/textMinHeight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Minimum education requirement"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:id="@+id/et_HighLvlEducation_edit"
+                    android:hint="@string/hintSelect"
+                    android:layout_gravity="center_vertical"
+                    style="@style/spinner_style"
+                    android:inputType="none"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:editable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:text="@string/txtDiet"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:layout_weight="0.1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_vegetarian_edit"
+                        android:layout_marginTop="0dp"
+                        android:paddingLeft="5dp"
+                        android:text="@string/txtVegetarian"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/rd_eggetarian_edit"
+                        android:text="@string/txtEggetarian"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/rd_nonvegetarian_edit"
+                        android:text="@string/txtNonVegetarian"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/rd_vegan_edit"
+                        android:text="@string/txtVegan"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/rd_dieNoPreference"
+                        android:text="@string/noPreference"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+                <!-- </RadioGroup>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Religion"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/et_religion_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="Select Religion"
+                    android:background="@drawable/border_bottom"
+                    android:drawableRight="@drawable/ic_dropdown_arrow"
+                    android:paddingLeft="5dp"
+                    android:inputType="none"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mother Tongue"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/et_mother_toungue_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="Select Mother Tongue"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="5dp"
+                    android:drawableRight="@drawable/ic_dropdown_arrow"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Family Origin"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/familyOriginET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="Religion"
+                    android:inputType="text"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Social Habit"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/socialHabitET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="Religion"
+                    android:inputType="text"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Diet"
+                    android:textSize="18sp"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <Spinner
+                    android:id="@+id/dietSPNR"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:paddingRight="5dp"></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Years in USA"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/yearsInUSAET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="Years in USA"
+                    android:inputType="text"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Legal Status"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/legalStatusET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="Religion"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:inputType="text"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:text="@string/txtMartialStatus"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/rg_MaritialStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_NeverMarried"
+                        android:paddingLeft="5dp"
+                        android:text="@string/txtNeverMarried"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textColor="@drawable/textcolor_selector_radio" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_Divorced"
+                        android:paddingLeft="5dp"
+                        android:text="@string/txtDivorced"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textColor="@drawable/textcolor_selector_radio" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_Widowed"
+                        android:text="@string/txtWidowed"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:paddingLeft="5dp"
+                        android:textColor="@drawable/textcolor_selector_radio" />
+
+                    <CheckBox
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/rd_nopreference"
+                        android:text="@string/noPreference"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textColor="@drawable/textcolor_selector_radio" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

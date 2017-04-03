@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_logo_25opacity"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="48dp" />
+
+    <com.bureau.bureauapp.adapters.ConversationsRecyclerView
+        android:id="@+id/conversations_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/viewpagerRL"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_margin="@dimen/activity_horizontal_margin">
+
+                <com.bureau.bureauapp.helperclasses.ClickableViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.bureau.bureauapp.helperclasses.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/footer"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dip"
+                    app:fillColor="@color/colorPrimary"
+                    app:pageColor="#9f9c9897"
+                    app:radius="7dp" />
+
+                <TextView
+                    android:id="@+id/likedPassedTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/indicator"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/bureau_title_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <LinearLayout
+                    android:id="@+id/matchPassLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/indicator"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/matchRL"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn_match"
+                        android:paddingTop="8dp">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/passRL"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/btn_pass"
+                        android:paddingTop="8dp">
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/createdByTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="24dp"
+                android:text="Created by : Other"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Name"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Private until connected"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Age"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/ageTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="22"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Location"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/locationTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Bangalore,KA"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Height"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/heightTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="5' 5"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Mother Tongue"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/motherToungueTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Telugu"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Religion"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/religionTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Family Origin"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/familyOriginTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Specification"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/specificationTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Education"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/educationTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="Honors"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/honorsTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="Major"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/majorTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="School"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/schoolTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="Year"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/yearTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Occupation"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/occupationTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Employer"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/employerTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Diet"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/dietTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Smoke"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/smokeTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Drink"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/drinkTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_years_in_usa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Years in USA"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/yearsInUSATV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_legal_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Legal Status"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/legalStatusTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="H/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Date of Birth"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/dateOfBirthTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Time of Birth"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/timeOfBirthTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_lob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Location of Birth"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/gray"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/locationOfBirthTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="-"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/aboutMeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimens_thirty_two_dp"
+                android:layout_marginRight="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:layout_marginBottom="@dimen/dimens_thirty_two_dp"
+                android:gravity="center_vertical"
+                android:text="About Me"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:textColor="@color/gray"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/errorMsgTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/bureau_regular_text_size"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dimens_sixteen_dp"
+        android:layout_marginRight="@dimen/dimens_sixteen_dp"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+</RelativeLayout>

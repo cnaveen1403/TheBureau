@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/bureau_title_text_size"
+        android:text="Title"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:id="@+id/dialogTitleTV"
+        android:textColor="@color/colorPrimary"
+        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/bureau_regular_text_size"
+        android:text="Are you sure you want to deactive your account ? Otherwise will not be able tp view your profile until account is reactived."
+        android:layout_margin="10dp"
+        android:id="@+id/dialogMessage"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/dialogMessage"
+        android:layout_marginTop="24dp"
+        android:background="#cbcbcb" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:text="Cancel"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/cancelTV"
+            android:layout_gravity="center_vertical"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#cbcbcb" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:text="Delete"
+            android:textColor="@color/blue"
+            android:id="@+id/OKTV"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+    </LinearLayout>
+</LinearLayout>

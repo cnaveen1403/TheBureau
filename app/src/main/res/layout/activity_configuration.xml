@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Configuration"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:textColor="@color/white"
+            fontPath="fonts/Comfortaa-Bold.ttf" />
+
+        <ImageView
+            android:id="@+id/backIconIMG"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/dimens_sixteen_dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="@dimen/dimens_twelve_dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_logo_white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="APP NOTIFICATIONS"
+                android:textSize="@dimen/bureau_title_text_size"
+                android:textColor="@color/black"
+                android:padding="@dimen/dimens_eight_dp"
+                android:background="@color/atlas_chip_background"
+                fontPath="fonts/Comfortaa-Bold.ttf" />
+
+            <RelativeLayout
+                android:id="@+id/dailymatchRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Daily Match"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/dailyMatchCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chatNotificationRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Chat Notifications"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/chatNotificationsCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/customerServicesRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Customer Services (Emails)"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/customerServicesCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/blogReleaseRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Blog Release"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/blogReleaseCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/soundsRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Sounds"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/soundsCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="MEMBERSHIP"
+                android:padding="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:textSize="@dimen/bureau_title_text_size"
+                android:textColor="@color/black"
+                android:background="@color/atlas_chip_background"
+                fontPath="fonts/Comfortaa-Bold.ttf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Account"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:id="@+id/config_profile_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:text="ACTIVE"
+                    android:background="@drawable/btn_radio_on"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:alpha="0.5"
+                    android:textSize="@dimen/bureau_title_text_size"
+                    android:textColor="@color/white"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Deactivate account"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/deactivateAccountCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Delete account"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:textColor="@color/black"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <CheckBox
+                    android:id="@+id/deleteAccountCB"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/custom_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="SUPPORT"
+                android:textSize="@dimen/bureau_title_text_size"
+                android:textColor="@color/black"
+                android:background="@color/atlas_chip_background"
+                android:padding="@dimen/dimens_eight_dp"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                fontPath="fonts/Comfortaa-Bold.ttf" />
+
+            <TextView
+                android:id="@+id/privacyPolicyTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="Privacy Policy"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:textColor="@color/black"
+                fontPath="fonts/Comfortaa-Regular.ttf"
+                android:layout_marginTop="@dimen/dimens_eight_dp" />
+
+            <TextView
+                android:id="@+id/termsAndConditionsTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="Terms and Conditions"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:textColor="@color/black"
+                fontPath="fonts/Comfortaa-Regular.ttf"
+                android:layout_marginTop="@dimen/dimens_eight_dp" />
+
+            <TextView
+                android:id="@+id/rateUsOnTheAppStoreTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="Rate us on the app store!"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:textColor="@color/black"
+                fontPath="fonts/Comfortaa-Regular.ttf"
+                android:layout_marginTop="@dimen/dimens_eight_dp" />
+
+            <Button
+                android:id="@+id/btn_Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp"
+                android:layout_marginBottom="@dimen/dimens_thirty_two_dp"
+                android:text="@string/txtLogout"
+                android:textAllCaps="false"
+                android:layout_gravity="bottom"
+                android:background="@drawable/btn_red"
+                android:textColor="@color/cardview_light_background"
+                fontPath="fonts/Comfortaa-Regular.ttf"
+                android:textSize="@dimen/bureau_title_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+
+    <!--<string name="facebook_app_id">242375646143920</string>-->
+
+    <string name="facebook_app_id">433933693662397</string>
+    <string name="fb_login_protocol_scheme">fb433933693662397</string>
+
+    <string name="app_name">TheBureau</string>
+
+    <!--common variables-->
+    <string name="txtRequired">*</string>
+    <string name="txtColon">:</string>
+    <string name="txtHeight">Height</string>
+
+    <string name="txtDiet">Diet</string>
+    <string name="txtDrinking">Drinking</string>
+    <string name="txtSmoking">Smoking</string>
+
+    <string name="txtReligion">Religion</string>
+    <string name="txtMotherToungue">Mother Toungue</string>
+    <string name="txtFamilyOrigin">Family Origin</string>
+    <string name="txtSpecification">Specification</string>
+
+    <string name="txtHonors">Honors</string>
+    <string name="txtMajor">Major</string>
+    <string name="txtCollege">College</string>
+    <string name="txtYear">Year</string>
+
+    <string name="txtYearsInUsa">Years in USA</string>
+    <string name="txtLegalStatus">Legal Status</string>
+
+    <string name="txtProfileDOB">Date of Birth</string>
+
+    <!--Login Sign up Screen -->
+    <string name="title_activity_login_signup">LoginSignup</string>
+    <string name="label_welcome">Welcome to</string>
+    <string name="label_theBureau">TheBureau</string>
+    <string name="label_login">Login</string>
+    <string name="label_Signup">Signup</string>
+    <string name="label_NewUsers">For New Users</string>
+    <string name="label_Existing">For Existing Users</string>
+
+    <!--Sign up Screen -->
+    <string name="title_activity_signup">Signup</string>
+    <string name="signup_fb_label">Signup with Facebook</string>
+    <string name="signup_digits_label">Signup with Mobile Number</string>
+
+    <!--Login Screen -->
+    <string name="title_activity_login">Login</string>
+    <string name="login_with_facebook">Login with facebook</string>
+    <string name="login_digits_label">Login with Mobile Number</string>
+
+    <!--Account Creation Screen -->
+    <string name="title_activity_account_creation">Account Creation</string>
+    <string name="title_activity_profile_setup">Create an account</string>
+    <string name="tvProvideTxt">Please provide your (the account holders) information below</string>
+    <string name="txtFirstName">First Name</string>
+    <string name="txtLastName">Last Name</string>
+    <string name="txtDOB"> 01/01/1990</string>
+    <string name="txtGender">Gender</string>
+    <string name="txtMobileNumber">mobile number</string>
+    <string name="txtEmailId"> email id</string>
+    <string name="txtSelectRelationship">Select Relationship</string>
+    <string name="tvProfileForTxt">Who are you creating this profile for ?</string>
+    <string name="txtContinue">Continue</string>
+
+    <!--Profile Info Screen -->
+    <string name="title_activity_profile_info">Profile Info</string>
+    <string name="txtCountry_residing_in">Country residing in</string>
+    <string name="txtUSA">USA</string>
+    <string name="txtIndia">India</string>
+    <string name="txtCurLocation">Current Location(Zip Code)</string>
+    <string name="txtHintZipcode">enter zipcode</string>
+    <string name="txtOkay">OK</string>
+    <string name="txtCancel">CANCEL</string>
+    <string name="txtHintHeight">select height</string>
+    <string name="txtMartialStatus">Martial Status</string>
+    <string name="txtNeverMarried">Never Married</string>
+    <string name="txtDivorced">Divorced</string>
+    <string name="txtWidowed">Widowed</string>
+    <string name="noPreference">No Preference</string>
+
+    <!--Profile Heritage Screen -->
+    <string name="title_activity_profile_heritage">Profile Heritage</string>
+    <string name="txtGothra">Gothra</string>
+    <string name="txt_select_item">Click to Select an item</string>
+
+    <!-- Profile Social Habit Screen -->
+    <string name="title_activity_social_habit">Social Habits</string>
+    <string name="txtVegetarian">Vegetarian</string>
+    <string name="txtEggetarian">Eggetarian</string>
+    <string name="txtNonVegetarian">Non Vegetarian</string>
+    <string name="txtVegan">Vegan</string>
+    <string name="txtSocially">Socially</string>
+    <string name="txtNever">Never</string>
+    <string name="txtNo">No</string>
+    <string name="txtYes">Yes</string>
+
+    <!-- Profile Occupation Screen -->
+    <string name="title_activity_occupation">Occupation</string>
+    <string name="txtEmpStatus">Employment Status</string>
+    <string name="txtEmployed">Employed</string>
+    <string name="txtUnemployed">Unemployed</string>
+    <string name="txtStudent">Student</string>
+    <string name="txtOthers">Others</string>
+    <string name="txtAdd2Lvl">Add 2nd level</string>
+    <string name="txtEducation">Highest Level of Education</string>
+    <string name="txtPositionTitle">Position/Title</string>
+    <string name="txtCompany">Company</string>
+    <string name="hintHonor">eg: Computer Science</string>
+    <string name="hintMajor">eg: Computer Engineer</string>
+    <string name="hintCollege">eg: London University</string>
+    <string name="hintYear">eg: 2010</string>
+    <string name="hintDesignation">designation</string>
+    <string name="hintCompany">company name</string>
+    <string name="hintSelect">Select</string>
+
+    <!-- Legal Status Screen-->
+    <string name="title_activity_legal_status">Legal Status</string>
+    <string name="txtYearsInUSA">Years in USA</string>
+    <string name="txtZeroToTwoYrs">0 &#8211; 2 Years</string>
+    <string name="txtTwoToSixYrs">2 &#8211; 6 Years</string>
+    <string name="txtSixPlusYrs">6+ Years</string>
+    <string name="txtBornAndRaised">Born and Raised</string>
+    <string name="txtUSACitizen">US Citizen</string>
+    <string name="txtGreenCard">Greencard</string>
+    <string name="txtGCProcessing">Greencard Processing</string>
+    <string name="txtStudentVisa">Student Visa</string>
+    <string name="txtH1Visa">H1Visa</string>
+    <string name="txtFinish">Finish</string>
+
+
+    <!--Variables for Match Making -->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_match_making">The Bureau</string>
+    <string name="txtName">Name</string>
+    <string name="txtAge">Age</string>
+    <string name="txtLocation">Location</string>
+    <string name="txtOccupation">Occupation</string>
+    <string name="txtEmployer">Employer</string>
+    <string name="txtTimeOfBirth">Time Of Birth</string>
+    <string name="txtBirthLocation">Location of Birth</string>
+    <string name="txtAbountMe">About Me &#160;&#160;&#160;&#160;</string>
+    <string name="txtCreatedBy">Created By&#160;:&#160;</string>
+    <string name="txtEducationInfo">Education</string>
+    <string name="imgDescProfilePicture">Profile Picture</string>
+    <string name="txt_NoMatchFound">Sorry We are Unable to provide the match of ther day, you can connect with one of our pool profilefor free.</string>
+
+
+    <!-- Welcome Dialog Variables -->
+    <string name="txtWelcomDialog"> Your profile is complete. Welcome to TheBureau !</string>
+
+    <string name="name"></string>
+
+    <string name="title_activity_basic_edit">Basic Info</string>
+    <string name="title_activity_image_edit">Profile Image</string>
+    <string name="txtZipCode">Zipcode</string>
+    <string name="txtSave">Save</string>
+
+    <string name="title_activity_education_edit">Education</string>
+    <string name="title_activity_occupation_edit">Occupation</string>
+    <string name="title_activity_heritage_edit">Heritage</string>
+    <string name="title_activity_social_habit_edit">Social Habits</string>
+    <string name="title_activity_legal_status_edit">Legal Status</string>
+    <string name="title_activity_horoscope_edit">Horoscope &amp; About Me</string>
+
+    <string name="Smooch_activityConversation">24x7 Customer Service</string>
+    <string name="Smooch_startOfConversation">This is the start of your conversation with TheBureau team.
+        We\'ll Stay in touch to help you get the most out of your experience.</string>
+    <string name="Smooch_welcome">Feel free to leave us a message with any questions, comments, suggestions, or concerns.
+        We will get back to you as soon as we can. Thanks!</string>
+    <string name="Smooch_messageHint">Type a message…</string>
+
+    <!--Layer.com strings-->
+
+    <string name="action_settings">Settings</string>
+    <string name="action_details">Conversation Details</string>
+    <string name="action_sendlogs">Send Debug Info</string>
+
+    <string name="title_conversations_list">Connections</string>
+    <string name="title_select_conversation">New Message</string>
+    <string name="title_messages_list">Messages</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_conversation_details">Details</string>
+
+    <string name="alert_message_resuming">Resuming Session</string>
+
+    <string name="alert_message_logout">Log out?</string>
+    <string name="alert_message_delete_message">Delete message?</string>
+    <string name="alert_message_delete_conversation">Delete conversation?</string>
+
+    <string name="alert_dialog_logout">Logging Out&#8230;</string>
+
+    <string name="alert_button_cancel">Cancel</string>
+    <string name="alert_button_delete_my_devices">For Me</string>
+    <string name="alert_button_delete_all_participants">From All</string>
+    <string name="alert_button_remove">Remove</string>
+    <string name="alert_button_block">Block</string>
+    <string name="alert_button_unblock">Unblock</string>
+    <string name="alert_button_logout">Log Out</string>
+
+    <string name="attachment_menu_camera">Camera</string>
+    <string name="attachment_menu_gallery">Gallery</string>
+    <string name="attachment_menu_location">Location</string>
+
+    <string name="toast_group_name_updated">Group name updated</string>
+    <string name="toast_failed_to_deauthenticate">Failed to deauthenticate: %1$s</string>
+    <string name="toast_copied_to_clipboard">Copied to clipboard</string>
+
+    <string name="conversation_details_title_options">Options</string>
+    <string name="conversation_details_hint_group_name">Group Name</string>
+    <string name="conversation_details_switch_show_notifications">Show Notifications</string>
+    <string name="conversation_details_button_leave_group">Leave Group</string>
+    <string name="conversation_details_title_participants">Participants</string>
+    <string name="conversation_details_button_add_participants">Add Participants</string>
+
+    <string name="settings_clipboard_description">Settings</string>
+    <string name="settings_content_connected">Connected</string>
+    <string name="settings_content_disconnected">Disconnected</string>
+    <string name="settings_content_app_version">Name %1$s / Code %2$d</string>
+    <string name="settings_content_android_version">Version %1$s / API level %2$d</string>
+    <string name="settings_content_disk_unlimited">Unlimited</string>
+    <string name="settings_content_disk_usage">%1$.2f %2$s</string>
+    <string name="settings_content_disk_gb">GB</string>
+    <string name="settings_content_disk_mb">MB</string>
+    <string name="settings_content_disk_kb">KB</string>
+    <string name="settings_content_disk_b">B</string>
+    <string name="settings_title_account">Account</string>
+    <string name="settings_button_log_out">Log Out</string>
+    <string name="settings_title_notifications">Notifications</string>
+    <string name="settings_switch_show_notifications">Show Notifications</string>
+    <string name="settings_title_debug">Debug</string>
+    <string name="settings_switch_verbose_logging">Verbose Logging</string>
+    <string name="settings_title_app_version">App Version</string>
+    <string name="settings_title_android_version">Android Version</string>
+    <string name="settings_title_atlas_version">Atlas Version</string>
+    <string name="settings_title_layer_version">Layer Version</string>
+    <string name="settings_title_user_id">User ID</string>
+    <string name="settings_title_statistics">Statistics</string>
+    <string name="settings_title_conversations">Conversations</string>
+    <string name="settings_title_messages">Messages</string>
+    <string name="settings_title_unread_messages">Unread Messages</string>
+    <string name="settings_title_rich_content">Rich Content</string>
+    <string name="settings_title_disk_utilization">Disk Utilization</string>
+    <string name="settings_title_disk_allowance">Disk Allowance</string>
+    <string name="settings_title_auto_download_types">Auto-Download MIME Types</string>
+
+    <string name="notifications_num_more">+%1$d more</string>
+    <string name="notifications_new_messages">%1$d new messages</string>
+
+    <string name="push_notification_no_content_title">New message (tap to sync)</string>
+
+
+    <!--Provider demo string-->
+    <string name="title_app_id_scanner">Capture Atlas QR Code</string>
+    <string name="login_name_hint">Your name</string>
+    <string name="login_dialog_message">Logging In&#8230;</string>
+
+    <!--ENd of provider demo strings-->
+
+    <!--Providerrails strings-->
+    <string name="app_id_required">Please set your Layer App ID in `Flavor.java` when using the Rails Identity Provider.  You can get your Layer App ID from the developer dashboard.</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <!--End of Providerrails strings-->
+
+    <!-- Logout Text -->
+    <string name="txtLogout">Logout</string>
+    <string name="txtGoldStoreTerms">All sales are final, please view our Terms &amp; Conditions for product details. You can also visit our website to check if we are running any special promotions!</string>
+
+    <!--No Network -->
+    <string name="no_network">Check your internet connection and try again.</string>
+
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="string_help_text"> The permission is missing.\n\nTo grant this permission click on Settings, then Permissions and turn the permission on.\n\nThen click back twice to return to the app</string>
+    <string name="quit">Close</string>
+    <string name="string_title_upload_progressbar_">Uploading.. Wait for a while...</string>
+    <string name="add_horoscope_title">Horoscope</string>
+
+</resources>

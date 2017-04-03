@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="TheBureau"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <ImageView
+            android:id="@+id/backIconIMG"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/tv_gold_pool_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="17sp"
+            android:layout_toLeftOf="@+id/iv_gold_icon_home"
+            android:textColor="@color/white"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <ImageView
+            android:id="@+id/iv_gold_icon_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/img_gold_action_item" />
+    </RelativeLayout>
+
+    <com.bureau.bureauapp.helperclasses.HorizontalListView
+        android:layout_width="match_parent"
+        android:id="@+id/userImagesHorizantalList"
+        android:layout_marginTop="10dp"
+        android:layout_height="110dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_logo_25opacity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Profile created by"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/profileCreatedByTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Self"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Age"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/ageTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Self"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Location"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/locationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bangalore, KA"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Height"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/heightTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="5'5"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Religion"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/religionTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hindu"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Family Origin"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/familyOriginTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lorem Ipsum"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Education"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/educationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bachelors"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Occupation"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:id="@+id/occupationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="IT Soft Engineer"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Connection Method"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/anonymousBTN"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_red"
+                        android:text="Anonymous"
+                        android:textAllCaps="false"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="-10dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        fontPath="fonts/Comfortaa-Bold.ttf" />
+
+                    <Button
+                        android:id="@+id/directBTN"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_red"
+                        android:text="Direct"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="-10dp"
+                        android:textSize="16sp"
+                        fontPath="fonts/Comfortaa-Bold.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="User will be unaware that you are interested"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="User will be notified that you are interested"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:textColor="@color/gray"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

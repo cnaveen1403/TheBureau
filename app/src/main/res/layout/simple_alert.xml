@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eaeaea"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/dialogTitleTV"
+        fontPath="fonts/Comfortaa-Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="Title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/bureau_title_text_size" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        fontPath="fonts/Comfortaa-Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:text="Are you sure you want to deactive your account ? Otherwise will not be able to view your profile until account is reactived."
+        android:textSize="@dimen/bureau_regular_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/dialogMessage"
+        android:layout_marginTop="24dp"
+        android:background="#747373" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/cancelTV"
+            fontPath="fonts/Comfortaa-Bold.ttf"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/bureau_title_text_size" />
+    </LinearLayout>
+</LinearLayout>

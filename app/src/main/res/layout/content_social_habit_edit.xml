@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".profileedit.SocialHabitEdit"
+    tools:showIn="@layout/activity_social_habit_edit"
+    tools:ignore="MissingPrefix">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dimens_eight_dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:text="@string/txtDiet"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:id="@+id/rg_Diet_edit">
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Checked"
+                        android:id="@+id/rd_vegetarian_edit"
+                        android:text="@string/txtVegetarian"
+                        android:paddingLeft="5dp"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_eggetarian_edit"
+                        android:text="@string/txtEggetarian"
+                        android:paddingLeft="5dp"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_nonvegetarian_edit"
+                        android:text="@string/txtNonVegetarian"
+                        android:paddingLeft="5dp"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/rd_vegan_edit"
+                        android:text="@string/txtVegan"
+                        android:paddingLeft="5dp"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center"
+                    android:text="@string/txtDrinking"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_socially_edit"
+                        android:text="@string/txtSocially"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:gravity="end"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <ToggleButton
+                        android:id="@+id/tb_drinking_edit"
+                        style="@style/ToggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="@dimen/dimens_eight_dp"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_never_edit"
+                        android:text="@string/txtNever"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@color/light_grey"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_eight_dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center"
+                    android:text="@string/txtSmoking"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center"
+                    android:text="@string/txtColon"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_no_edit"
+                        android:text="@string/txtNo"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:gravity="end"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                    <ToggleButton
+                        android:id="@+id/tb_smoking_edit"
+                        style="@style/ToggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_yes_edit"
+                        android:text="@string/txtYes"
+                        android:textSize="@dimen/bureau_regular_text_size"
+                        android:textColor="@color/light_grey"
+                        fontPath="fonts/Comfortaa-Regular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

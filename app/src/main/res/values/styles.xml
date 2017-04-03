@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--
+                <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        -->
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:homeAsUpIndicator">@drawable/back_icon</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:homeAsUpIndicator">@drawable/back_icon</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Widget" />
+
+    <!--<style name="AppTheme.Widget.TextView" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="fontPath">fonts/Comfortaa-Regular.ttf</item>
+    </style>-->
+
+    <style name="ComfortaaCustomFont">
+        <item name="fontPath">fonts/Comfortaa-Regular.ttf</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomDigitsTheme" parent="AppTheme">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColorLink">@android:color/darker_gray</item>
+        <item name="dgts__accentColor">@android:color/holo_red_dark</item>
+        <item name="dgts__logoDrawable">@drawable/img_logo</item>
+    </style>
+
+    <style name="Welcome_Splash">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">#99FFFFFF</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+
+    </style>
+
+    <style name="MyTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMaxWidth">0dp</item>
+    </style>
+
+    <style name="TheBureau_Splash">
+        <item name="android:textSize">80sp</item>
+        <item name="android:textColor">#BFFFFFFF</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <!--Spinner -->
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gradient_spinner</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#DFFFFFFF</item>
+    </style>
+
+    <!--Radio Button -->
+
+    <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/custom_btn_radio</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="RadioButton.RadioButton_Horizontal_Checked">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="RadioButton.RadioButton_Horizontal_Unchecked">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:checked">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="RadioButton.RadioButton_Verticle_Checked">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="RadioButton.RadioButton_Verticle_Unchecked">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:checked">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <!--Toggle Button-->
+    <style name="ToggleButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/toggle_selector</item>
+        <item name="android:checked">false</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:text"></item>
+        <item name="android:textOff"></item>
+        <item name="android:textOn"></item>
+    </style>
+
+    <style name="textView_Label">
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

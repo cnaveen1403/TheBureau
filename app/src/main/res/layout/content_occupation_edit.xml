@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens_eight_dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".profileedit.OccupationEdit"
+    tools:showIn="@layout/activity_occupation_edit"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_EmpStatus_edit"
+            android:text="@string/txtEmpStatus"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/bureau_regular_text_size"
+            android:layout_marginEnd="@dimen/emp_status_right_margin"
+            android:layout_marginRight="@dimen/emp_status_right_margin"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_Colon"
+            android:text="@string/txtColon"
+            android:textSize="@dimen/bureau_regular_text_size"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tv_EmpStatus_edit"
+            android:layout_toRightOf="@+id/tv_EmpStatus_edit"
+            android:layout_marginEnd="@dimen/emp_status_colon_margin"
+            android:layout_marginRight="@dimen/emp_status_colon_margin" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg_EmpStatus_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView_Colon"
+            android:layout_toRightOf="@+id/textView_Colon">
+
+            <RadioButton
+                style="@style/RadioButton.RadioButton_Verticle_Checked"
+                android:id="@+id/rd_Employed_edit"
+                android:text="@string/txtEmployed"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:paddingLeft="5dp"
+                android:onClick="onEmpStatusClicked"
+                android:textColor="@drawable/textcolor_selector_radio"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_EditEmplyerInfo_edit"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:id="@+id/et_position"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="5dp"
+                    android:hint="@string/hintDesignation"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_company"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:background="@drawable/border_bottom"
+                    android:hint="@string/hintCompany"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+            </LinearLayout>
+
+            <RadioButton
+                style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                android:id="@+id/rd_Unemployed_edit"
+                android:paddingLeft="5dp"
+                android:text="@string/txtUnemployed"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:onClick="onEmpStatusClicked"
+                android:textColor="@drawable/textcolor_selector_radio"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <RadioButton
+                style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                android:id="@+id/rd_Student_edit"
+                android:text="@string/txtStudent"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:paddingLeft="5dp"
+                android:onClick="onEmpStatusClicked"
+                android:textColor="@drawable/textcolor_selector_radio"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <RadioButton
+                style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                android:id="@+id/rd_OtherEmpStatus_edit"
+                android:text="@string/txtOthers"
+                android:textSize="@dimen/bureau_regular_text_size"
+                android:paddingLeft="5dp"
+                android:onClick="onEmpStatusClicked"
+                android:textColor="@drawable/textcolor_selector_radio"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_EmployerPosition_edit"
+            android:layout_below="@+id/textView_EmpStatus"
+            android:layout_marginTop="43dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPositionTitle"
+                android:textSize="@dimen/bureau_subtitle_text_size"
+                android:layout_marginEnd="@dimen/position_right_margin"
+                android:layout_marginRight="@dimen/position_right_margin"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtColon"
+                android:textSize="@dimen/bureau_subtitle_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_EmployerCompany_edit"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/ll_EmployerPosition_edit"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtCompany"
+                android:textSize="@dimen/bureau_subtitle_text_size"
+                android:layout_marginEnd="@dimen/company_right_margin"
+                android:layout_marginRight="@dimen/company_right_margin"
+                fontPath="fonts/Comfortaa-Regular.ttf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtColon"
+                android:textSize="@dimen/bureau_subtitle_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

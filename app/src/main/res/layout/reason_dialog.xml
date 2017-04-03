@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/bureau_title_text_size"
+        android:text="Title"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:id="@+id/dialogTitleTV"
+        android:textColor="@color/colorPrimary"
+        fontPath="fonts/Comfortaa-Bold.ttf" />
+
+    <EditText
+        android:id="@+id/reasonEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_bottom"
+        android:hint="Enter Reason"
+        android:inputType="textCapSentences"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/bureau_regular_text_size"
+        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/dialogMessage"
+        android:layout_marginTop="5dp"
+        android:background="#cbcbcb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/cancelTV"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:textColor="@color/colorPrimary"
+            fontPath="fonts/Comfortaa-Bold.ttf" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#cbcbcb" />
+
+        <TextView
+            android:id="@+id/OKTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Ok"
+            android:textSize="@dimen/bureau_title_text_size"
+            android:textColor="@color/blue"
+            fontPath="fonts/Comfortaa-Bold.ttf" />
+    </LinearLayout>
+</LinearLayout>

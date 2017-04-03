@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_logo_25opacity"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="48dp" />
+
+    <com.bureau.bureauapp.adapters.ConversationsRecyclerView
+        android:id="@+id/conversations_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/poolRL">
+
+        <com.bureau.bureauapp.helperclasses.ClickableViewPager
+            android:id="@+id/pool_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.bureau.bureauapp.helperclasses.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/footer"
+            android:layout_marginBottom="5dp"
+            android:padding="5dip"
+            app:fillColor="#d60c2c"
+            app:pageColor="#333435"
+            app:radius="7dp" />
+
+        <RelativeLayout
+            android:id="@+id/skipLL"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_above="@+id/indicator"
+            android:background="@drawable/btn_tab_to_view_profile"
+            android:paddingTop="5dp"
+            android:layout_centerHorizontal="true"></RelativeLayout>
+
+        <View
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/bureau_regular_text_size"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dimens_sixteen_dp"
+        android:layout_marginRight="@dimen/dimens_sixteen_dp"
+        android:id="@+id/errorMsgTV"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        fontPath="fonts/Comfortaa-Regular.ttf" />
+
+</RelativeLayout>

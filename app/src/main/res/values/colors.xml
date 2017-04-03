@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d50f26</color>
+    <color name="colorPrimaryDark">#d50f26</color>
+    <color name="colorAccent">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_grey">#AAABA7</color>
+
+    <color name="black">#000000</color>
+    <color name="blue">#1780f1</color>
+    <color name="red">#1780f1</color>
+    <color name="gray">#666666</color>
+    <color name="cardview_light_background">#fff</color>
+
+
+    <!--smooch colors-->
+
+    <color name="Smooch_accent">#d50f26</color>
+    <color name="Smooch_accentDark">#bf0117</color>
+    <color name="Smooch_accentLight">#f44559</color>
+
+    <color name="Smooch_backgroundInput">#ffffff</color>
+
+    <color name="Smooch_btnSendHollow">#c0c0c0</color>
+    <color name="Smooch_btnSendHollowBorder">#303030</color>
+
+    <color name="Smooch_header">#989898</color>
+
+    <color name="Smooch_messageDate">@color/Smooch_header</color>
+    <color name="Smooch_messageShadow">#7f999999</color>
+
+    <color name="Smooch_remoteMessageAuthor">@color/Smooch_header</color>
+    <color name="Smooch_remoteMessageBackground">#d2cdca</color>
+    <color name="Smooch_remoteMessageBorder">#6e645e</color>
+    <color name="Smooch_remoteMessageText">#000000</color>
+
+    <color name="Smooch_userMessageBackground">#eb8793</color>
+    <color name="Smooch_userMessageBorder">#c42134</color>
+    <color name="Smooch_userMessageFailedBackground">@color/Smooch_accentLight</color>
+    <color name="Smooch_userMessageText">#000000</color>
+
+    <color name="app_id_scanner_outline_color">#C0FFFFFF</color>
+    <color name="spinner_base_color">#44000000</color>
+</resources>

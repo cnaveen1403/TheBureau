@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="#eaeaea"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/txtHeight"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="@dimen/bureau_title_text_size"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        fontPath="fonts/Comfortaa-Bold.ttf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/border_bottom_light"
+        android:weightSum="1">
+
+        <NumberPicker
+            android:id="@+id/foot_np"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+
+        <NumberPicker
+            android:id="@+id/inch_np"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+            fontPath="fonts/Comfortaa-Regular.ttf" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/txtCancel"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="@dimen/bureau_title_text_size"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/border_right_light"
+                fontPath="fonts/Comfortaa-Bold.ttf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_Okay"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/txtOkay"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="@dimen/bureau_title_text_size"
+                android:textColor="@color/blue"
+                fontPath="fonts/Comfortaa-Bold.ttf" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bureau.bureauapp.profilesetup.ProfileInfo"
+    tools:showIn="@layout/activity_profile_info"
+    tools:ignore="MissingPrefix">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="@string/txtCountry_residing_in"
+                    android:id="@+id/tvCountry"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <RadioGroup
+                    android:id="@+id/RCountry_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Horizontal_Checked"
+                        android:id="@+id/radio_USA"
+                        android:text="@string/txtUSA"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:paddingLeft="5dp"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        style="@style/RadioButton.RadioButton_Horizontal_Unchecked"
+                        android:paddingLeft="5dp"
+                        android:layout_weight="0.2"
+                        android:id="@+id/radio_India"
+                        android:text="@string/txtIndia"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="@string/txtCurLocation"
+                    android:id="@+id/tvLocation"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:paddingLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/editText_Zipcode"
+                    android:hint="@string/txtHintZipcode"
+                    android:paddingBottom="8dp"
+                    android:singleLine="true"
+                    android:background="@drawable/border_bottom"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="@string/txtHeight"
+                    android:id="@+id/tvHeight"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <EditText
+                    android:id="@+id/editText_Height"
+                    android:layout_width="0dp"
+                    android:paddingLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:hint="@string/txtHintHeight"
+                    android:paddingBottom="8dp"
+                    android:singleLine="true"
+                    android:background="@drawable/border_bottom"
+                    fontPath="fonts/Comfortaa-Regular.ttf"
+                    android:textSize="@dimen/bureau_regular_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="@string/txtMartialStatus"
+                    android:id="@+id/tvMartialStatus"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_MaritialStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Checked"
+                        android:id="@+id/radio_NeverMarried"
+                        android:text="@string/txtNeverMarried"
+                        android:paddingLeft="5dp"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/radio_Divorced"
+                        android:paddingLeft="5dp"
+                        android:text="@string/txtDivorced"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+
+                    <RadioButton
+                        style="@style/RadioButton.RadioButton_Verticle_Unchecked"
+                        android:id="@+id/radio_Widowed"
+                        android:paddingLeft="5dp"
+                        android:text="@string/txtWidowed"
+                        android:textColor="@drawable/textcolor_selector_radio"
+                        fontPath="fonts/Comfortaa-Regular.ttf"
+                        android:textSize="@dimen/bureau_regular_text_size" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText_ProfileDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtProfileDOB"
+                android:drawableStart="@drawable/ic_calendar_black"
+                android:drawableLeft="@drawable/ic_calendar_black"
+                android:paddingLeft="5dp"
+                android:drawablePadding="8dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/border_bottom"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                fontPath="fonts/Comfortaa-Regular.ttf"
+                android:textSize="@dimen/bureau_regular_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/tvProfileGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtGender"
+                    android:textSize="@dimen/bureau_regular_text_size"
+                    fontPath="fonts/Comfortaa-Regular.ttf" />
+
+                <ImageView
+                    android:id="@+id/ivFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_female_black"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+                <ToggleButton
+                    android:id="@+id/tb_profile_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/toggle_gender_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <ImageView
+                    android:id="@+id/ivMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_male_red"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:padding="3dp"
+                android:layout_marginTop="10dp">
+
+                <com.bureau.bureauapp.helperclasses.HorizontalListView
+                    android:id="@+id/profileImagesList"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_toLeftOf="@+id/ivAddProfileImage" />
+
+                <ImageView
+                    android:id="@+id/ivAddProfileImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_camera"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimens_eight_dp"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_profileInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtContinue"
+        android:textAllCaps="false"
+        android:layout_gravity="bottom"
+        android:background="@drawable/btn_radio_on"
+        android:textColor="@color/cardview_light_background"
+        android:textAppearance="?android:textAppearanceMedium"
+        fontPath="fonts/Comfortaa-Regular.ttf"
+        android:textSize="@dimen/bureau_title_text_size" />
+</LinearLayout>
